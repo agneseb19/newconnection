@@ -767,4 +767,5 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
   .cap .chip{margin-top:14px;padding:8px 14px;font-size:13px}
   .cap .btn{margin-top:18px}
   .labels{display:none}
+  .cap-5.left{bottom:calc(76px + env(safe-area-inset-bottom))}
 }
