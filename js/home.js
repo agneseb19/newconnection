@@ -90,7 +90,7 @@ async function start() {
     L.heroX = L.tall ? 0 : (heroPx / w - 0.5) * visW(L.dHero);
     L.heroY = L.tall ? t2 * L.dHero * (w < 620 ? 0.04 : 0.17) : 0;
         // fine animazione: su telefono il modello torna più piccolo e più in alto, sopra i testi
-    L.endD = L.tall ? L.dHero * 1.35 : L.dHero;
+    L.endD = L.tall ? L.dHero * 1.5 : L.dHero;
     L.endY = L.tall ? (0.5 - L.band.mid) * t2 * L.endD : L.heroY;
     // centro della pila quando il testo è a sinistra (+1) o a destra (-1), in unità 3D
     const toWorld = (px) => (px / w - 0.5) * visW(L.dExp);
