@@ -768,4 +768,8 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
   .cap .btn{margin-top:18px}
   .labels{display:none}
   .cap-5.left{bottom:calc(76px + env(safe-area-inset-bottom))}
+    .mobile-menu{gap:24px}
+  .mobile-menu li a{font-size:21px;padding:14px 0}
+  .mobile-menu li a svg{width:16px;height:16px}
+  .mobile-menu .cta-pill{height:46px;padding:0 20px;font-size:14px}
 }
