@@ -796,15 +796,12 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
 /* meno spazio tra "Chi siamo" e "Recensioni" (hanno lo stesso sfondo) */
 #chi-siamo + #recensioni{padding-top:24px}
 
-/* ===== Riparazioni: prima i componenti, poi i pulsanti (in tutte le pagine) ===== */
-.rep-copy{display:contents}
-.rep-panel{grid-template-areas:"titolo elenco" "testo elenco" "testo pulsanti";grid-template-rows:auto auto 1fr;align-items:start;row-gap:0}
-.rep-copy h3{grid-area:titolo}
-.rep-copy p{grid-area:testo}
-.rep-items{grid-area:elenco}
-.rep-copy .actions{grid-area:pulsanti;margin-top:28px}
+/* ===== Riparazioni su TELEFONO: prima i componenti, poi i pulsanti ===== */
 @media (max-width:820px){
-  .rep-panel{grid-template-areas:"titolo" "testo" "elenco" "pulsanti";grid-template-rows:none}
-  .rep-copy p{margin-bottom:12px}
-  .rep-copy .actions{margin-top:24px}
+  .rep-copy{display:contents}
+  .rep-panel{grid-template-areas:"titolo" "testo" "elenco" "pulsanti";align-items:start;row-gap:0}
+  .rep-copy h3{grid-area:titolo}
+  .rep-copy p{grid-area:testo;margin-bottom:12px}
+  .rep-items{grid-area:elenco}
+  .rep-copy .actions{grid-area:pulsanti;margin-top:24px}
 }
