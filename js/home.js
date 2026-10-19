@@ -89,6 +89,9 @@ async function start() {
     const colW = Math.min(maxW, w), heroPx = (w - colW) / 2 + colW * 0.74;
     L.heroX = L.tall ? 0 : (heroPx / w - 0.5) * visW(L.dHero);
     L.heroY = L.tall ? t2 * L.dHero * (w < 620 ? 0.04 : 0.17) : 0;
+        // fine animazione: su telefono il modello torna più piccolo e più in alto, sopra i testi
+    L.endD = L.tall ? L.dHero * 1.35 : L.dHero;
+    L.endY = L.tall ? (0.5 - L.band.mid) * t2 * L.endD : L.heroY;
     // centro della pila quando il testo è a sinistra (+1) o a destra (-1), in unità 3D
     const toWorld = (px) => (px / w - 0.5) * visW(L.dExp);
     L.shiftR = L.tall ? 0 : toWorld((L.free.left[0] + L.free.left[1]) / 2);
@@ -149,7 +152,7 @@ async function start() {
   // 3. tutto si ricompone e il telefono torna di fronte
   tl.to(S, { lab: 0, duration: 0.4 }, 9.9);
   tl.to(S.ex, { screen: 0, frame: 0, board: 0, battery: 0, bottom: 0, coil: 0, back: 0, cam: 0, duration: 1.5, ease: 'power3.inOut' }, 10.1);
-  tl.to(S, { x: () => L.heroX, y: () => L.heroY, d: () => L.dHero, rx: 0.05, ry: Math.PI * 2 + 0.35, duration: 1.8 }, 10.1);
+  tl.to(S, { x: () => L.heroX, y: () => L.endY, d: () => L.endD, rx: 0.05, ry: Math.PI * 2 + 0.35, duration: 1.8 }, 10.1);
   capIn('.cap-5', 11.4);
   tl.to({}, { duration: 0.8 }, 11.9);
 
