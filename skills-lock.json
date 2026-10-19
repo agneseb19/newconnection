@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "Taste": {
+      "source": "clawic/skills",
+      "sourceType": "github",
+      "skillPath": "skills/taste/SKILL.md",
+      "computedHash": "951d31610495112d481833c348910b989e6878a3f16a3a3bc48434b726d5ad3b"
+    },
+    "awesome-design-md": {
+      "source": "Tekkiiiii/the-agency",
+      "sourceType": "github",
+      "skillPath": "skills/awesome-design-md/SKILL.md",
+      "computedHash": "c8b1fb9f880f79c11eb35537c5ef821848ac7e5db4d63fb52d7e5b7d644a7fd3"
+    }
+  }
+}

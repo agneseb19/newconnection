@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="it" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>New Connection — Riparazioni di smartphone, PC e console a Valmontone</title>
+<meta name="description" content="Riparazioni complete di smartphone, PC e console (PS4, PS5, Xbox) a Valmontone, in Via Molino San Giovanni 37. Vendita di telefoni nuovi, iPhone usati e Open Box, PC nuovi e notebook ricondizionati.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="assets/favicon.png">
+<script>
+  /* tema giorno (predefinito) / notte: applicato prima che la pagina compaia */
+  (function () { var t = 'light'; try { t = localStorage.getItem('nc-theme') || 'light'; } catch (e) {} document.documentElement.setAttribute('data-theme', t); })();
+</script>
+<script type="importmap">{"imports":{"three":"./js/vendor/three.module.min.js","three/addons/":"./js/vendor/addons/"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo-link" href="index.html" aria-label="New Connection, home"><img class="logo-for-light" src="assets/logo-dark.png" alt="New Connection"><img class="logo-for-dark" src="assets/logo-light.png" alt="" aria-hidden="true"></a>
+    <nav class="nav-center" aria-label="Principale"><ul class="nav-links"><li><a href="index.html" aria-current="page">Home</a></li><li><a href="servizi.html">Servizi</a></li><li><a href="assistenza.html">Assistenza</a></li><li><a href="contatti.html">Contatti</a></li></ul></nav>
+    <div class="nav-right">
+      <button class="theme-btn" type="button" aria-label="Passa alla modalità notte"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.4"/><path class="half" d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></button>
+      <a class="cta-pill" href="assistenza.html#richiesta">Richiedi assistenza <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></a>
+      <button class="burger" type="button" aria-label="Apri il menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu"><ul><li><a href="index.html" aria-current="page">Home <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></a></li><li><a href="servizi.html">Servizi <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></a></li><li><a href="assistenza.html">Assistenza <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></a></li><li><a href="contatti.html">Contatti <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></a></li></ul><a class="cta-pill" href="assistenza.html#richiesta">Richiedi assistenza <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></a></div>
+</header>
+
+<main>
+<section class="teardown" id="teardown" aria-label="Introduzione">
+  <div class="stage">
+    <canvas id="heroCanvas" role="img" aria-label="iPhone 3D che si scompone nei suoi componenti mentre scorri la pagina"></canvas>
+    <div class="labels" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <span class="label dot">Centro riparazioni · Valmontone</span>
+      <h1 class="display">Si è rotto?<br><span class="grad">Lo ripariamo.</span></h1>
+      <p class="body-lg">Smartphone, PC e console: schermo, batteria, fotocamere, scheda madre e molto altro.</p>
+      <div class="actions"><a class="btn btn-solid" href="assistenza.html#richiesta">Richiedi una riparazione <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></a><a class="btn btn-line" href="https://wa.me/393481768071" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.4-.3z"/></svg> WhatsApp</a></div>
+      <p class="no3d-note">Il tuo browser non mostra l’anteprima 3D, ma qui trovi tutte le informazioni.</p>
+    </div>
+    <div class="hero-meta">
+      <span class="label muted">Scorri per scomporre ↓</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="cap cap-0 left"><span class="cap-word">Ogni pezzo.</span><p>Conosciamo il tuo telefono strato per strato.</p></div>
+    <div class="cap cap-1 left"><span class="cap-word">Schermo</span><p>Vetro incrinato, touch che non risponde, righe sul display. Lo sostituiamo.</p><span class="chip">Sostituzione schermo</span></div>
+    <div class="cap cap-2 right"><span class="cap-word">Batteria</span><p>Si scarica in fretta o si spegne all’improvviso? Con una batteria nuova torna in forma.</p><span class="chip">Sostituzione batteria</span></div>
+    <div class="cap cap-3 left"><span class="cap-word">Scheda madre</span><p>Non si accende, non carica, si riavvia da solo: interveniamo anche sulla scheda.</p><span class="chip">Riparazione scheda madre</span></div>
+    <div class="cap cap-4 right"><span class="cap-word">Fotocamere</span><p>Lenti graffiate, foto sfocate, fotocamera che non parte: le sistemiamo.</p><span class="chip">Riparazione fotocamere</span></div>
+    <div class="cap cap-5 left"><span class="cap-word">Come nuovo.</span><p>Portaci il tuo dispositivo a Valmontone.</p><a class="btn btn-solid" href="#riparazioni">Vedi le riparazioni <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></a></div>
+
+    <div class="progress" aria-hidden="true"><i></i></div>
+    <span class="loading-3d">Caricamento del modello 3D…</span>
+  </div>
+</section>
+
+<section class="infobar" aria-label="Informazioni rapide">
+  <div class="wrap">
+    <ul class="strip" data-reveal>
+      <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><b>Oggi</b> <span data-today-hours>Lun–Ven 9:30–13 · 15:30–19:30 · Sab 9:30–13</span></span><span class="status" data-status></span></li>
+      <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Via+Molino+San+Giovanni+37+Valmontone+Roma" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span>Via Molino San Giovanni 37, Valmontone</span></a></li>
+      <li><a href="tel:+393481768071"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><span>348 176 8071</span></a></li>
+      <li><a class="strip-wa" href="https://wa.me/393481768071" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.4-.3z"/></svg><span>WhatsApp</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sect" id="riparazioni">
+  <div class="wrap">
+    <div class="grid sect-head" data-reveal>
+      <span class="label dot">Riparazioni</span>
+      <h2 class="title">Riparazioni complete,<br><span class="grad">per ogni dispositivo.</span></h2>
+      <p class="body-lg">Ci racconti il problema, facciamo la diagnosi e ti diciamo cosa serve prima di intervenire.</p>
+    </div>
+    <div class="rep-box" data-tabs data-reveal>
+      <div class="rep-tabs" role="tablist" aria-label="Tipo di dispositivo"><button role="tab" id="t-smartphone" aria-controls="p-smartphone" aria-selected="true" tabindex="0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span>Smartphone</button><button role="tab" id="t-computer" aria-controls="p-computer" aria-selected="false" tabindex="-1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></span>Computer</button><button role="tab" id="t-console" aria-controls="p-console" aria-selected="false" tabindex="-1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9h10a4 4 0 0 1 4 4l.6 3.4a2 2 0 0 1-3.5 1.6L16 16H8l-2.1 2a2 2 0 0 1-3.5-1.6L3 13a4 4 0 0 1 4-4z"/><path d="M8 12v2M7 13h2M15.5 12.5h.01M17.5 13.5h.01"/></svg></span>Console</button></div>
+      <div class="rep-panel in" role="tabpanel" id="p-smartphone" aria-labelledby="t-smartphone">
+        <div class="rep-copy"><h3>Smartphone</h3><p>Riparazioni complete per iPhone e Android: Samsung, Honor, Oppo, Realme, Motorola e altri marchi.</p><div class="actions"><a class="btn btn-solid" href="assistenza.html#richiesta">Richiedi la riparazione <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></a><a class="btn btn-line" href="https://wa.me/393481768071" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.4-.3z"/></svg> WhatsApp</a></div></div>
+        <ul class="rep-items"><li style="--i:0">Schermo</li><li style="--i:1">Batteria</li><li style="--i:2">Fotocamere</li><li style="--i:3">Tasti</li><li style="--i:4">Scheda madre</li><li style="--i:5">Connettore di ricarica</li><li style="--i:6">E molto altro</li></ul>
+      </div><div class="rep-panel" role="tabpanel" id="p-computer" aria-labelledby="t-computer" hidden>
+        <div class="rep-copy"><h3>Computer</h3><p>PC portatili e fissi: dall’hardware alla scheda madre, li rimettiamo in funzione.</p><div class="actions"><a class="btn btn-solid" href="assistenza.html#richiesta">Richiedi la riparazione <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></a><a class="btn btn-line" href="https://wa.me/393481768071" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.4-.3z"/></svg> WhatsApp</a></div></div>
+        <ul class="rep-items"><li style="--i:0">Schermo</li><li style="--i:1">Batteria</li><li style="--i:2">Tastiera</li><li style="--i:3">Scheda madre</li><li style="--i:4">Alimentazione</li><li style="--i:5">E molto altro</li></ul>
+      </div><div class="rep-panel" role="tabpanel" id="p-console" aria-labelledby="t-console" hidden>
+        <div class="rep-copy"><h3>Console</h3><p>Ripariamo PlayStation 4, PlayStation 5 e Xbox. Portala in negozio: facciamo la diagnosi e ti diciamo cosa serve.</p><div class="actions"><a class="btn btn-solid" href="assistenza.html#richiesta">Richiedi la riparazione <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></a><a class="btn btn-line" href="https://wa.me/393481768071" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.4-.3z"/></svg> WhatsApp</a></div></div>
+        <ul class="rep-items"><li style="--i:0">PS4</li><li style="--i:1">PS5</li><li style="--i:2">Xbox</li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="marquee" aria-label="Marchi che ripariamo e vendiamo"><div class="marquee-track"><span>Apple</span><span>Samsung</span><span>Honor</span><span>Oppo</span><span>Realme</span><span>Motorola</span><span>PlayStation</span><span>Xbox</span><span>Apple</span><span>Samsung</span><span>Honor</span><span>Oppo</span><span>Realme</span><span>Motorola</span><span>PlayStation</span><span>Xbox</span><span>Apple</span><span>Samsung</span><span>Honor</span><span>Oppo</span><span>Realme</span><span>Motorola</span><span>PlayStation</span><span>Xbox</span><span>Apple</span><span>Samsung</span><span>Honor</span><span>Oppo</span><span>Realme</span><span>Motorola</span><span>PlayStation</span><span>Xbox</span></div></div>
+</section>
+
+<section class="sect" id="promozioni">
+  <div class="wrap">
+    <div class="grid sect-head" data-reveal>
+      <span class="label dot">Inaugurazione</span>
+      <h2 class="title">Promo <span class="grad">di apertura</span></h2>
+      <p class="body-lg">Stiamo preparando le offerte per festeggiare l’apertura. Passa in negozio o seguici sui social per non perderle.</p>
+    </div>
+    <ul class="promos">
+      <li data-reveal style="--i:0"><div class="promo"><span class="tag">In arrivo</span><h3>Promo riparazioni</h3><p>Presto i dettagli.</p></div></li>
+      <li data-reveal style="--i:1"><div class="promo"><span class="tag">In arrivo</span><h3>Promo smartphone</h3><p>Presto i dettagli.</p></div></li>
+      <li data-reveal style="--i:2"><div class="promo"><span class="tag">In arrivo</span><h3>Promo computer</h3><p>Presto i dettagli.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sect alt" id="vendita">
+  <div class="wrap">
+    <div class="grid sect-head" data-reveal>
+      <span class="label dot">Vendita</span>
+      <h2 class="title">Telefoni e <span class="grad">computer</span></h2>
+      <p class="body-lg">Telefoni e computer da portare via subito. E se un giorno si rompono, li ripariamo noi.</p>
+    </div>
+    <ul class="sales"><li data-reveal style="--i:0"><div class="sale"><div class="tags"><span>Nuovi</span></div><h3>Smartphone nuovi</h3><p>Samsung, Honor, Oppo, Realme, Motorola e altri marchi.</p></div></li><li data-reveal style="--i:1"><div class="sale"><div class="tags"><span>Usato</span><span>Open Box</span></div><h3>iPhone usati e Open Box</h3><p>iPhone usati e Open Box, a prezzi più accessibili del nuovo.</p></div></li><li data-reveal style="--i:2"><div class="sale"><div class="tags"><span>Nuovi</span></div><h3>PC desktop e notebook</h3><p>Computer fissi e portatili nuovi.</p></div></li><li data-reveal style="--i:3"><div class="sale"><div class="tags"><span>Ricondizionati</span></div><h3>Notebook ricondizionati</h3><p>Portatili ricondizionati, pronti all’uso.</p></div></li></ul>
+  </div>
+</section>
+
+
+<section class="sect alt" id="chi-siamo">
+  <div class="wrap grid about">
+    <figure class="about-photo" data-reveal>
+      <!-- Foto di Gianmarco dal sito flashrepairstore.it. Per averla in locale: salvala in assets/ e cambia il percorso qui sotto. -->
+      <img src="https://flashrepairstore.it/wp-content/uploads/2025/05/gianmarco-latini.png" alt="Gianmarco, il tecnico di New Connection" loading="lazy" onerror="this.style.visibility='hidden'">
+      <figcaption>Gianmarco</figcaption>
+    </figure>
+    <div class="about-text" data-reveal>
+      <span class="label dot">Chi siamo</span>
+      <h2 class="title">Persone,<br><span class="grad">prima dei dispositivi.</span></h2>
+      <p class="body-lg">New Connection nasce a Valmontone per aiutarti con quello che usi ogni giorno. Ripariamo smartphone, computer e console, vendiamo telefoni e PC, e ti spieghiamo cosa succede con parole semplici.</p>
+      <div class="facts">
+        <div><span class="k">Riparazioni</span><p>Smartphone, PC, console</p></div>
+        <div><span class="k">Vendita</span><p>Telefoni e computer</p></div>
+        <div><span class="k">Dove</span><p>Via Molino San Giovanni 37</p></div>
+        <div><span class="k">Quando</span><p>Lun–Sab, mattina e pomeriggio</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sect alt" id="recensioni">
+  <div class="wrap">
+    <div class="rev-head" data-reveal>
+      <div><span class="label dot" style="margin-bottom:20px">Recensioni</span><h2 class="title">Dicono <span class="grad">di noi</span></h2></div>
+      <div class="rev-nav">
+        <button id="revPrev" aria-label="Recensioni precedenti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button id="revNext" aria-label="Recensioni successive"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <div class="rev-track" id="revTrack" tabindex="0" aria-label="Recensioni dei clienti"></div>
+    <div class="rev-empty" id="revEmpty" hidden>
+      <h3>Sei già passato da noi?</h3>
+      <p>Siamo appena arrivati a Valmontone: la tua recensione su Google ci aiuta a farci conoscere.</p>
+    </div>
+    <div class="rev-foot" data-reveal><a class="btn btn-solid" data-nc="recensioniGoogle" href="#" target="_blank" rel="noopener">Vedi tutte le recensioni su Google <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></a></div>
+  </div>
+</section>
+
+<section class="sect" id="visita">
+  <div class="wrap">
+    <div class="grid sect-head" data-reveal><span class="label dot">Dove siamo</span><h2 class="title">Vieni a <span class="grad">trovarci.</span></h2></div>
+    <div class="visit" data-reveal>
+      <div class="visit-info">
+        <div class="vi">
+          <span class="k">Indirizzo</span>
+          <p class="vi-big">Via Molino San Giovanni 37<br>00038 Valmontone (RM)</p>
+        </div>
+        <div class="vi">
+          <span class="k">Orari</span>
+          <dl class="hours-g">
+            <div data-days="1,2,3,4,5"><dt>Lunedì – Venerdì</dt><dd>9:30–13 · 15:30–19:30</dd></div>
+            <div data-days="6"><dt>Sabato</dt><dd>9:30–13</dd></div>
+            <div data-days="0"><dt>Domenica</dt><dd>Chiuso</dd></div>
+          </dl>
+          <p class="vi-status"><span class="status" data-status></span></p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Via+Molino+San+Giovanni+37+Valmontone+Roma" target="_blank" rel="noopener">Indicazioni <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></a>
+          <a class="btn btn-line" href="tel:+393481768071"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> Chiama</a>
+        </div>
+      </div>
+      <div class="visit-map"><iframe title="Mappa: New Connection, Via Molino San Giovanni 37, Valmontone" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Via+Molino+San+Giovanni+37+Valmontone+Roma&amp;z=16&amp;output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<div class="callbar"><a class="btn btn-line" href="tel:+393481768071">Chiama</a><a class="btn btn-solid" href="https://wa.me/393481768071" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.4-.3z"/></svg> WhatsApp</a></div>
+<footer class="footer">
+  <div class="wrap footer-in">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo-link" href="index.html" aria-label="New Connection, home"><img class="logo-for-light" src="assets/logo-dark.png" alt="New Connection"><img class="logo-for-dark" src="assets/logo-light.png" alt="" aria-hidden="true"></a>
+        <p>Riparazioni di smartphone, computer e console a Valmontone.</p>
+      </div>
+      <div class="foot-col">
+        <span class="k">Contatti</span>
+        <a href="tel:+393481768071">348 176 8071</a>
+        <a href="https://wa.me/393481768071" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Via+Molino+San+Giovanni+37+Valmontone+Roma" target="_blank" rel="noopener">Via Molino San Giovanni 37<br>Valmontone (RM)</a>
+      </div>
+      <div class="foot-col">
+        <span class="k">Orari</span>
+        <span>Lun–Ven 9:30–13 e 15:30–19:30</span>
+        <span>Sabato 9:30–13</span>
+        <span>Domenica chiuso</span>
+      </div>
+      <div class="foot-col">
+        <span class="k">Seguici</span>
+        <a data-nc="instagram" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a data-nc="facebook" href="#" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>&copy; <span data-year></span> New Connection di G&amp;L Srl · Sede legale Via Casilina 67, 00038 Valmontone (RM) · P. IVA e C.F. 17088051002</p>
+      <nav aria-label="Pagine"><a href="index.html">Home</a><a href="servizi.html">Servizi</a><a href="assistenza.html">Assistenza</a><a href="contatti.html">Contatti</a></nav>
+    </div>
+    <p class="credits">Modelli 3D: <a href="https://sketchfab.com/3d-models/apple-iphone-15-pro-max-black-df17520841214c1792fb8a44c6783ee7" target="_blank" rel="noopener">iPhone 15 Pro Max</a> di polyman (CC BY 4.0) · MacBook da pmndrs (MIT). I marchi appartengono ai rispettivi proprietari.</p>
+  </div>
+</footer>
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/reviews.js"></script>
+<script src="js/shared.js"></script>
+<script type="module" src="js/home.js"></script>
+</body>
+</html>
