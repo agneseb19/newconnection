@@ -792,3 +792,6 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
   .rev{padding:22px}
   .rev blockquote{font-size:15.5px}
 }
+
+/* meno spazio tra "Chi siamo" e "Recensioni" (hanno lo stesso sfondo) */
+#chi-siamo + #recensioni{padding-top:24px}
