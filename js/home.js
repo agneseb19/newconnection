@@ -82,7 +82,7 @@ async function start() {
     const navH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 76;
     const top = navH + 16, bot = Math.max(h * 0.5, h - (w < 620 ? 300 : 340));
     L.band = { top, bot, frac: (bot - top) / h, mid: (top + bot) / 2 / h };
-    L.dExp = L.tall ? Math.max(4.7 / (t2 * L.band.frac), 3.4 / (t2 * camera.aspect * 0.86)) : Math.max(3.9 / t2, 5.6 / (t2 * camera.aspect), 5.0 / (t2 * camera.aspect * (freeW / w)));
+    L.dExp = L.tall ? Math.max(2.6 / (t2 * L.band.frac), 3.9 / (t2 * camera.aspect * 0.94)) : Math.max(3.9 / t2, 5.6 / (t2 * camera.aspect), 5.0 / (t2 * camera.aspect * (freeW / w)));
     const visW = (d) => t2 * d * camera.aspect;
     // telefono a destra dentro la colonna dei contenuti (anche su schermi molto larghi)
     const maxW = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--max')) || 1320;
@@ -97,9 +97,9 @@ async function start() {
     L.shiftR = L.tall ? 0 : toWorld((L.free.left[0] + L.free.left[1]) / 2);
     L.shiftL = L.tall ? 0 : toWorld((L.free.right[0] + L.free.right[1]) / 2);
     L.expY = L.tall ? (0.5 - L.band.mid) * t2 * L.dExp : 0.05;
-    L.rx = L.tall ? 1.02 : 0.3;
-    L.ry = L.tall ? -0.42 : -0.98;
-    L.dirs = L.tall ? DIR_TALL : DIR_WIDE;
+    L.rx = 0.3;
+    L.ry = -0.98;
+    L.dirs = DIR_WIDE;
     Object.keys(labelEls).forEach((k) => {
       const [d, len] = L.dirs[k];
       labelEls[k].className = 'lbl ' + d;
@@ -193,7 +193,9 @@ async function start() {
     const float = reduce ? 0 : Math.sin(t * 1.1) * 0.03;
     holder.position.set(S.x, S.y + float, 0);
     spin.rotation.set(S.rx + py * 0.12, S.ry + px * 0.25, 0);
-    phone.apply(S.ex, S.lift);
+        const k = L.tall ? 0.8 : 1, ex = {};
+    Object.keys(S.ex).forEach((n) => { ex[n] = S.ex[n] * k; });
+    phone.apply(ex, S.lift);
     camera.position.set(0, 0, S.d); camera.lookAt(0, 0, 0);
     renderer.render(scene, camera);
 
@@ -228,7 +230,7 @@ async function start() {
         pos[k] = { x: (v.x * 0.5 + 0.5) * L.w, y: (-v.y * 0.5 + 0.5) * L.h };
       });
       // telefono/tablet: etichette in due colonne ai bordi, senza sovrapporsi
-      if (L.tall) {
+      if (false) {
         const margin = 10, gap = L.w < 620 ? 26 : 34;
         // se il testo uscirebbe dallo schermo, l'etichetta passa dall'altro lato
         Object.keys(pos).forEach((k) => {

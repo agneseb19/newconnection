@@ -748,3 +748,23 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
 @media (min-width:1800px){:root{--max:1520px}body{font-size:18px}}
 @media (min-width:2400px){:root{--max:1760px}body{font-size:19px}}
 @media (min-width:1800px){.display{font-size:clamp(80px,4.4vw,112px)}.title{font-size:clamp(50px,2.8vw,64px)}.body-lg{font-size:20px}}
+
+/* ===== TELEFONO: dimensioni più compatte ===== */
+@media (max-width:760px){
+  :root{--nav-h:64px}
+  body{font-size:15px}
+  .logo-link{height:36px}
+  .theme-btn,.burger{width:42px;height:42px}
+  .theme-btn svg{width:19px;height:19px}
+  .display{font-size:clamp(30px,8vw,40px)}
+  .title{font-size:clamp(25px,6.6vw,32px)}
+  .body-lg{font-size:15.5px}
+  .btn{height:46px;padding:0 22px;font-size:15px;gap:10px}
+  .callbar{padding:6px;gap:6px}
+  .callbar .btn{height:42px;font-size:14px}
+  .cap-word{font-size:clamp(28px,7.6vw,38px)}
+  .cap p{font-size:15px;margin-top:10px}
+  .cap .chip{margin-top:14px;padding:8px 14px;font-size:13px}
+  .cap .btn{margin-top:18px}
+  .labels{display:none}
+}
