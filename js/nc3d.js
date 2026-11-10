@@ -755,7 +755,7 @@ function winScreenTex() {
     x.fillStyle = 'rgba(10,12,30,.55)'; x.fillRect(0, h - 64, w, 64);
     for (let i = 0; i < 7; i++) { x.fillStyle = i === 0 ? '#4aa3ff' : 'rgba(255,255,255,.55)'; rect(x, w / 2 - 210 + i * 60, h - 50, 38, 38, 9); x.fill(); }
     x.fillStyle = 'rgba(255,255,255,.85)'; x.font = '400 22px ' + FONT; x.textAlign = 'right'; x.fillText('10:08', w - 30, h - 24);
-  }, false);   // come lo schermo del vecchio MacBook: altrimenti appare capovolto
+  });
 }
 
 export async function buildAndroid() {
@@ -782,13 +782,9 @@ export async function buildAndroid() {
 }
 
 export async function buildLaptop() {
-  const src = await loadGLB('macbook');
+  // modello New Connection: ha già il suo schermo e i suoi materiali, non si ritoccano
+  const src = await loadGLB('notebook-new-connection');
   tuneMaterials(src);
-  src.traverse((o) => {
-    if (!o.isMesh || !o.material) return;
-    if (o.material.name === 'screen.001') o.material = new THREE.MeshBasicMaterial({ map: winScreenTex(), toneMapped: false });
-    else if (o.material.name === 'aluminium') { o.material = o.material.clone(); o.material.color.set(0x2b2e36); o.material.roughness = 0.5; o.material.metalness = 0.6; }
-  });
   const g = new THREE.Group(); g.add(src);
   return normalize(g, 3.2);
 }

@@ -13,7 +13,8 @@ window.NC = {
   instagram: 'https://www.instagram.com/reset.valmontonestore/',
   facebook: 'https://www.facebook.com/reset.valmontonestore',
 
-  // Link alle recensioni Google del negozio
+  // Link alle recensioni Google del negozio (scheda di Reset Valmontone Store).
+  // Quando la scheda Google verrà rinominata in New Connection, cambia anche il nome qui sotto.
   recensioniGoogle: 'https://www.google.com/maps/search/?api=1&query=Reset+Valmontone+Store+Via+Molino+San+Giovanni+37+Valmontone',
 
   // Orari: 0 = domenica, 1 = lunedì ... 6 = sabato. Fasce in ore decimali.
