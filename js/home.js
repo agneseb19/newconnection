@@ -128,7 +128,7 @@ async function start() {
 
   // 1. il testo iniziale esce, il telefono si gira e si apre a strati
   tl.to('.hero-copy', { autoAlpha: 0, y: -50, duration: 0.6 }, 0.1);
-  tl.to('.scroll-hint', { autoAlpha: 0, duration: 0.3 }, 0);
+  tl.to('#teardown .hero-meta', { autoAlpha: 0, duration: 0.3 }, 0);
   // posizione di partenza ricalcolata a ogni ridimensionamento della finestra
   tl.fromTo(S, { x: () => L.heroX, y: () => L.heroY, d: () => L.dHero }, { x: 0, y: () => L.expY, d: () => L.dExp, rx: () => L.rx, ry: () => L.ry, duration: 1.4, immediateRender: true }, 0.3);
   const order = ['screen', 'frame', 'board', 'battery', 'bottom', 'coil', 'back', 'cam'];

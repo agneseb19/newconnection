@@ -50,7 +50,7 @@ async function start() {
     pivot.rotation.set(0, 0, 0); pivot.scale.setScalar(1); pivot.updateMatrixWorld(true);
     const s = new THREE.Box3().setFromObject(current).getSize(new THREE.Vector3());
     pivot.rotation.copy(keep); pivot.scale.setScalar(keepS);
-    const t2 = 2 * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)), f = DATA[key].fill * (viewer.classList.contains('compact') ? 1.45 : 1);
+    const t2 = 2 * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)), f = DATA[key].fill;
     const r = Math.max(s.x, s.z) * 0.92;          // ruotando, la larghezza cambia
     dist = Math.max(s.y / (t2 * f), r / (t2 * camera.aspect * f)) + s.z * 0.3;
   }

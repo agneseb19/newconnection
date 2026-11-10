@@ -425,7 +425,7 @@ section,.footer{position:relative;overflow-x:clip}
 .field input:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px color-mix(in srgb,var(--blue) 15%,transparent)}
 .field ::placeholder{color:var(--fg-2);opacity:1}
 .field-row{display:grid;grid-template-columns:1fr 1fr;column-gap:16px}
-fieldset.field{margin:0 0 20px;border:0;min-width:0}
+fieldset.field{margin:0 0 20px;padding:0;border:0;min-width:0}
 .opts{display:flex;flex-wrap:wrap;gap:8px}
 .opt{position:relative;cursor:pointer}
 .opt input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
@@ -661,13 +661,13 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
 @media (max-width:1100px){.visit{grid-template-columns:1fr}.visit-map{min-height:340px}}
 @media (max-width:420px){.hours-g>div{flex-direction:column;gap:2px}.hours-g dd{text-align:left}}
 /* riquadro 3D compatto (Servizi): modello sopra, didascalia e comandi in una fascia sotto */
-.viewer.compact canvas{inset:0 0 104px 0;height:auto}
+.viewer.compact canvas{inset:0 0 auto 0;height:calc(100% - 104px)}
 .viewer.compact .viewer-info{left:28px;bottom:26px;max-width:calc(100% - 240px)}
 .viewer.compact .viewer-info h3{font-size:24px;margin-bottom:2px}
 .viewer.compact .viewer-info p{font-size:14px;line-height:1.45}
 .viewer.compact .viewer-tools{right:24px;bottom:30px}
 .viewer.compact::after{content:"";position:absolute;left:0;right:0;bottom:104px;height:1px;background:var(--line)}
-@media (max-width:620px){.viewer.compact canvas{bottom:150px}.viewer.compact::after{bottom:150px}.viewer.compact .viewer-info{bottom:84px;max-width:none;right:20px}}
+@media (max-width:620px){.viewer.compact canvas{height:calc(100% - 150px)}.viewer.compact::after{bottom:150px}.viewer.compact .viewer-info{bottom:84px;max-width:none;right:20px}}
 
 /* contatti compatti: una riga per canale, il numero una volta sola */
 .ways{gap:12px}
@@ -722,6 +722,7 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
   .hero-copy .display{font-size:clamp(28px,5vw,44px)}
   .hero-copy .label{margin-bottom:10px}
   .hero-meta{bottom:14px}
+  .labels{display:none}
   .cap.left,.cap.right{top:calc(50% + var(--nav-h) / 2);bottom:auto;translate:0 -50%;width:40vw}
   .cap.right{left:auto;right:var(--side)}
   .cap.left{right:auto}
@@ -767,7 +768,7 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
   .cap .chip{margin-top:14px;padding:8px 14px;font-size:13px}
   .cap .btn{margin-top:18px}
   .labels{display:none}
-  .cap-5.left{bottom:calc(76px + env(safe-area-inset-bottom))}
+  .cap-5.left{bottom:calc(88px + env(safe-area-inset-bottom))}
     .mobile-menu{gap:24px}
   .mobile-menu li a{font-size:21px;padding:14px 0}
   .mobile-menu li a svg{width:16px;height:16px}

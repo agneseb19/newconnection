@@ -20,6 +20,10 @@
     $$('.nav-links a, .mobile-menu a').forEach(function (a) {
       a.addEventListener('click', function () { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; });
     });
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape' || !nav.classList.contains('open')) return;
+      nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; burger.focus();
+    });
   }
 
   /* ----- Tema giorno / notte ----- */
