@@ -99,7 +99,7 @@ section,.footer{position:relative;overflow-x:clip}
 .nav{position:fixed;inset:0 0 auto;z-index:100;height:var(--nav-h);background:var(--header-bg);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid transparent;transition:border-color .4s var(--ease),background-color .4s}
 .nav.scrolled{border-bottom-color:var(--line)}
 .nav-inner{height:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px}
-.logo-link{position:relative;display:block;height:clamp(44px,4vw,58px);aspect-ratio:1594/502;justify-self:start}
+.logo-link{position:relative;display:block;height:clamp(44px,4vw,58px);aspect-ratio:1584/491;justify-self:start}
 .logo-link img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 .logo-for-dark{visibility:hidden}
 :root[data-theme="dark"] .logo-for-dark{visibility:visible}
