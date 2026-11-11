@@ -178,6 +178,25 @@
   /* ----- Contatti: email quando sarà attiva ----- */
   if (NC.email) $$('[data-email-way]').forEach(function (el) { el.href = 'mailto:' + NC.email; var l = el.querySelector('[data-email-label]'); if (l) l.textContent = NC.email; });
 
+  /* ----- Promo a tempo: data-promo-from / data-promo-until (AAAA-MM-GG, giorni inclusi) -----
+     Prima dell'inizio resta il testo scritto nell'HTML; durante: "Fino al …" (ultima settimana: "Ultimi N giorni");
+     dopo la fine la card sparisce. In anteprima sul computer si può provare una data con ?oggi=AAAA-MM-GG */
+  (function () {
+    var MESI = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
+    var day = function (s) { var p = String(s).split('-'); return new Date(+p[0], p[1] - 1, +p[2]); };
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var test = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) && /[?&]oggi=(\d{4}-\d{2}-\d{2})/.exec(location.search);
+    if (test) today = day(test[1]);
+    $$('[data-promo-until]').forEach(function (el) {
+      var from = el.getAttribute('data-promo-from'), until = day(el.getAttribute('data-promo-until'));
+      if (today > until) { el.hidden = true; return; }
+      if (from && today < day(from)) return;
+      var left = Math.round((until - today) / 864e5) + 1, when = el.querySelector('[data-promo-when]');
+      if (!when) return;
+      when.textContent = left === 1 ? 'Ultimo giorno!' : left <= 7 ? 'Ultimi ' + left + ' giorni!' : 'Fino al ' + until.getDate() + ' ' + MESI[until.getMonth()];
+    });
+  })();
+
   /* ----- Anno nel footer ----- */
   $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 

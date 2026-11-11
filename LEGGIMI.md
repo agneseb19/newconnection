@@ -12,7 +12,9 @@
 
 **Prima di andare online**
 - [ ] **Email** → `js/config.js`, voce `email`.
-- [ ] **Promo di apertura** → in `index.html` cerca "Presto i dettagli" (3 schede) e scrivi le offerte vere.
+- [x] **Promo PC** → HP EliteBook 840 G5 a 299 €, dall'apertura al 31 dicembre. Dal 1° gennaio la card sparisce da sola (data in `index.html`, attributo `data-promo-until`). Nell'ultima settimana mostra "Ultimi N giorni!".
+- [ ] **Sezione foto del negozio in home** → come sul sito di Flash Repair (flashrepairstore.it): una sezione con le immagini del negozio. Servono le foto.
+- [ ] **Promo smartphone** → in `index.html` cerca `PROMO SMARTPHONE` e scrivi l'offerta vera al posto di "La seconda offerta arriva a breve".
 - [ ] **Privacy e cookie con iubenda** → incollare il banner cookie di iubenda nel `<head>` di tutte le pagine e i link "Privacy" e "Cookie" nel footer. In iubenda dichiarare: **Google Maps** (mappa incorporata) e **Google Fonts** (font Outfit).
 - [x] **Anteprima social** → immagine `assets/og-image.jpg` e tag già inseriti nelle 4 pagine; icona per la Home dell'iPhone `assets/apple-touch-icon.png`.
 - [ ] **Dominio definitivo** → appena è deciso: rendere completo l'indirizzo dell'immagine di anteprima (`og:image`) e aggiungere `og:url`; creare `robots.txt` e `sitemap.xml`.

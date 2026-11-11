@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-11T17:13:21.715Z",
+        "reason": "Claude, 2026-11-11: testo bianco su card promo con gradiente #1a4fe0→#7a1fe8, contrasti misurati 6.48–6.81 (kicker 5.12); il controllo non legge i fondi a gradiente"
+      }
+    ]
+  }
+}
