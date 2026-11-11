@@ -8,6 +8,21 @@
 
 ⚠️ **Usa sempre Go Live.** Se apri `index.html` con il doppio clic, il browser blocca i modelli 3D: il sito mostra i testi ma non le animazioni (e compare un avviso).
 
+## ✅ DA FARE (aggiornato all'11 novembre 2026)
+
+**Prima di andare online**
+- [ ] **Email** → `js/config.js`, voce `email`.
+- [ ] **Promo di apertura** → in `index.html` cerca "Presto i dettagli" (3 schede) e scrivi le offerte vere.
+- [ ] **Privacy e cookie con iubenda** → incollare il banner cookie di iubenda nel `<head>` di tutte le pagine e i link "Privacy" e "Cookie" nel footer. In iubenda dichiarare: **Google Maps** (mappa incorporata) e **Google Fonts** (font Outfit).
+- [x] **Anteprima social** → immagine `assets/og-image.jpg` e tag già inseriti nelle 4 pagine; icona per la Home dell'iPhone `assets/apple-touch-icon.png`.
+- [ ] **Dominio definitivo** → appena è deciso: rendere completo l'indirizzo dell'immagine di anteprima (`og:image`) e aggiungere `og:url`; creare `robots.txt` e `sitemap.xml`.
+- [ ] **Google Search Console** → dopo la pubblicazione: registrare il sito e inviare la sitemap (Claude ti spiega i passaggi).
+- [ ] **Pubblicazione su SiteGround** → caricare l'intera cartella (comprese `js/vendor` e `assets/models`), tranne `node_modules`, `tests` e i file `.md`.
+
+**Dopo, fuori dal sito — NON DIMENTICARE**
+- [ ] **Scheda Google "Reset Valmontone Store"** → rinominarla in New Connection, cambiare l'indirizzo in **Via Molino San Giovanni 37** (oggi è ancora Via della Pace 1/2, presso Fashion Hotel) e aggiungere il link al nuovo sito. Poi aggiornare `recensioniGoogle` in `js/config.js`.
+- [ ] **Instagram e Facebook** → dopo il cambio nome, se cambia il nome utente (`reset.valmontonestore`) aggiornare i link `instagram` e `facebook` in `js/config.js`.
+
 ## Il sito attuale (14 ottobre, con i dati di Gianmarco)
 Stile chiaro e arrotondato (vedi `DESIGN.md`). In home, nell'ordine: iPhone 3D, barra con orario di oggi / indirizzo / telefono / WhatsApp, riparazioni (schede Smartphone · Computer · Console), promo di apertura, vendita, prodotti 3D, chi siamo, recensioni, orari e contatti.
 - Telefono e WhatsApp: 348 176 8071 (già inseriti in `js/config.js`).
@@ -33,19 +48,21 @@ Da qui non ho potuto scaricarli: i modelli migliori sono su Sketchfab, che richi
 2. Scarica il formato **glTF Binary (.glb)**.
 3. Rinomina i file in `ps5.glb` e `tv.glb` e mettili nella cartella `assets/models`.
 4. Ricarica la pagina: il sito li usa al posto di quelli costruiti da codice, senza toccare altro.
-5. Aggiungi nel footer (file `build` o direttamente nei 4 HTML, riga "Modelli 3D") il nome dell'autore: con la licenza CC BY è obbligatorio.
+5. Aggiungi in `crediti-3d.html` il nome dell'autore e la licenza: con la licenza CC BY è obbligatorio.
 
 ## Dove modificare le cose
 - `js/config.js` → telefono, WhatsApp, email, link Instagram e Facebook, orari. Quello che lasci vuoto viene nascosto.
 - `js/reviews.js` → incolla qui le recensioni Google vere (c'è un esempio nel file).
 - Promozioni → ora la sezione è nascosta. In `index.html` cerca `id="promozioni" hidden`, togli `hidden` e sostituisci `Promozione 1/2/3` con le offerte vere.
 - **Importante:** in `js/config.js` inserisci telefono, WhatsApp ed email. Senza questi dati il modulo di assistenza non può inviare la richiesta e il pulsante "Chiama" resta nascosto.
-- Foto di Gianmarco → in `index.html` cerca `gianmarco-latini.png`: ora è collegata al sito flashrepairstore.it. Meglio salvarla in `assets/` e cambiare il percorso.
+- Foto di Gianmarco → `assets/gianmarco.png` (per cambiarla sostituisci quel file).
 - Colore dell'iPhone 3D → in `js/nc3d.js` cerca `IPHONE_COLOR`.
 
-## Crediti dei modelli 3D (obbligatori, già nel footer)
-- iPhone: "Apple iPhone 15 Pro Max Black" di polyman, Sketchfab, licenza CC BY 4.0 (colori modificati).
-- MacBook: `mac-draco.glb` da pmndrs/examples, licenza MIT.
+## Crediti dei modelli 3D (obbligatori)
+Sono nella pagina `crediti-3d.html`, collegata dal footer ("Crediti modelli 3D").
+- iPhone: "Apple iPhone 15 Pro Max Black" di polyman, Sketchfab, licenza CC BY 4.0 (modificato).
+- MacBook e Notebook: modelli di New Connection (`assets/models/macbook-new-connection.glb`, `notebook-new-connection.glb`).
+- Se aggiungi un modello con licenza CC BY (es. PS5), scrivi autore e licenza in `crediti-3d.html`.
 
 ## Pubblicazione
 Solo dopo aver controllato tutto con Go Live, carica online l'intera cartella (comprese `js/vendor` e `assets/models`).
