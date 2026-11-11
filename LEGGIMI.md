@@ -13,7 +13,7 @@
 **Prima di andare online**
 - [ ] **Email** → `js/config.js`, voce `email`.
 - [x] **Promo PC** → HP EliteBook 840 G5 a 299 €, dall'apertura al 31 dicembre. Dal 1° gennaio la card sparisce da sola (data in `index.html`, attributo `data-promo-until`). Nell'ultima settimana mostra "Ultimi N giorni!".
-- [ ] **Sezione foto del negozio in home** → come sul sito di Flash Repair (flashrepairstore.it): una sezione con le immagini del negozio. Servono le foto.
+- [ ] **Foto del negozio** → la sezione in home ("Il negozio") è pronta, con 5 riquadri. Metti le foto in `assets/negozio/` con questi nomi: `negozio-1.jpg` (la grande: il negozio), `negozio-2.jpg` (vetrina), `negozio-3.jpg` (banco), `negozio-4.jpg` (laboratorio), `negozio-5.jpg` (prodotti). Ogni foto che aggiungi prende il posto del suo riquadro, senza toccare il codice. Meglio foto orizzontali, larghe circa 1600 px.
 - [ ] **Promo smartphone** → in `index.html` cerca `PROMO SMARTPHONE` e scrivi l'offerta vera al posto di "La seconda offerta arriva a breve".
 - [ ] **Privacy e cookie con iubenda** → incollare il banner cookie di iubenda nel `<head>` di tutte le pagine e i link "Privacy" e "Cookie" nel footer. In iubenda dichiarare: **Google Maps** (mappa incorporata) e **Google Fonts** (font Outfit).
 - [x] **Anteprima social** → immagine `assets/og-image.jpg` e tag già inseriti nelle 4 pagine; icona per la Home dell'iPhone `assets/apple-touch-icon.png`.
@@ -26,7 +26,7 @@
 - [ ] **Instagram e Facebook** → dopo il cambio nome, se cambia il nome utente (`reset.valmontonestore`) aggiornare i link `instagram` e `facebook` in `js/config.js`.
 
 ## Il sito attuale (14 ottobre, con i dati di Gianmarco)
-Stile chiaro e arrotondato (vedi `DESIGN.md`). In home, nell'ordine: iPhone 3D, barra con orario di oggi / indirizzo / telefono / WhatsApp, riparazioni (schede Smartphone · Computer · Console), promo di apertura, vendita, prodotti 3D, chi siamo, recensioni, orari e contatti.
+Stile chiaro e arrotondato (vedi `DESIGN.md`). In home, nell'ordine (dall'11 novembre): iPhone 3D, barra con orario di oggi / indirizzo / telefono / WhatsApp, promo di apertura, chi siamo, il negozio (foto), recensioni, vieni a trovarci. Riparazioni e vendita sono solo nella pagina Servizi.
 - Telefono e WhatsApp: 348 176 8071 (già inseriti in `js/config.js`).
 - **Email:** quando Gianmarco attiva info@…, scrivila in `js/config.js` alla voce `email`: il pulsante "Email" del modulo si attiva da solo.
 - **Promo di apertura:** in `index.html` cerca `Promo riparazioni`, `Promo smartphone`, `Promo computer` e scrivi le offerte vere al posto di "Presto i dettagli".
