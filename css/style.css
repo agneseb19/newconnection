@@ -566,7 +566,7 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
 }
 @media (max-width:760px){
   .promo-pc{grid-template-columns:1fr;min-height:0;padding:26px 22px 28px}
-  .promo-pc-media{order:-1;margin:-6px -10px 4px;max-width:420px;justify-self:center;width:100%}
+  .promo-pc-media{order:-1;margin:0 0 6px;max-width:280px;justify-self:center;width:76%;padding-left:0}
   .promo-pc::after{right:auto;left:50%;top:22%;width:90%;translate:-50% -50%}
   .promo-pc .promo-kicker{margin-top:22px}
   .promo-actions{width:100%}
