@@ -300,6 +300,19 @@ section,.footer{position:relative;overflow-x:clip}
 .facts p{margin:4px 0 0;font-weight:500}
 @media (max-width:900px){.about-photo{grid-column:1/-1;max-width:520px;margin-bottom:40px}.about-text{grid-column:1/-1}}
 @media (max-width:460px){.facts{grid-template-columns:1fr}}
+.about-text .body-lg{margin-bottom:16px}
+.about-text .body-lg,.about-more{max-width:620px}
+.about-more{margin:0 0 28px;color:var(--fg-2)}
+.about-photo figcaption b{display:block;font-weight:600}
+.about-photo figcaption span{display:block;font-size:12px;font-weight:500;color:#5b6072;margin-top:1px}
+.about-photo figcaption{line-height:1.25;border-radius:18px}
+@media (max-width:560px){.about .facts{grid-template-columns:1fr 1fr;gap:10px}.about .facts>div{padding:14px 16px}.about .facts p{font-size:14.5px}.about .facts .k{font-size:11px;letter-spacing:.1em}}
+.about .facts>div{background:var(--surface)}
+.about .facts p{font-size:16px}
+.about-quote{margin:30px 0 0;padding:0}
+.about-quote::before{content:"\201C";display:block;height:.5em;margin-bottom:6px;font-size:64px;font-weight:700;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.about-quote blockquote{margin:0;font-size:clamp(18px,1.6vw,21px);font-weight:500;line-height:1.45;letter-spacing:-.01em}
+.about-quote figcaption{margin-top:8px;font-size:14px;color:var(--fg-2)}
 
 /* ---------- Recensioni (compaiono quando ci sono quelle vere) ---------- */
 .rev-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:24px;margin-bottom:36px}
