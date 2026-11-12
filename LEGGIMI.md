@@ -23,6 +23,7 @@
 
 **Dopo, fuori dal sito — NON DIMENTICARE**
 - [ ] **Scheda Google "Reset Valmontone Store"** → rinominarla in New Connection, cambiare l'indirizzo in **Via Molino San Giovanni 37** (oggi è ancora Via della Pace 1/2, presso Fashion Hotel) e aggiungere il link al nuovo sito. Poi aggiornare `recensioniGoogle` in `js/config.js`.
+- [ ] **Profilo WhatsApp Business (348 176 8071)** → oggi si presenta come "Reset Valmontone Store" con il logo Reset: cambiare nome, foto profilo (logo New Connection) e descrizione nell'app WhatsApp Business.
 - [ ] **Instagram e Facebook** → dopo il cambio nome, se cambia il nome utente (`reset.valmontonestore`) aggiornare i link `instagram` e `facebook` in `js/config.js`.
 
 ## Il sito attuale (14 ottobre, con i dati di Gianmarco)
