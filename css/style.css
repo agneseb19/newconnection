@@ -575,7 +575,7 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
 .price-row{display:flex;align-items:flex-end;flex-wrap:wrap;gap:6px 18px;margin-top:22px}
 .price{display:flex;align-items:flex-start;line-height:.85;font-weight:700;letter-spacing:-.05em;text-shadow:0 10px 30px rgba(20,10,90,.35)}
 .price .num{font-size:clamp(76px,8vw,112px)}
-.price .cur{font-size:clamp(32px,3.2vw,46px);margin:.12em 0 0 .06em}
+.price .cur{font-size:clamp(28px,2.8vw,40px);margin:.12em 0 0 .06em;letter-spacing:-.03em;white-space:nowrap}
 .promo-pc .when{padding-bottom:8px;font-size:15px;font-weight:600;color:#fff}
 .when::before{content:"";display:inline-block;width:8px;height:8px;margin-right:8px;border-radius:50%;background:#7dffb3;vertical-align:1px}
 .promo-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}

@@ -12,9 +12,9 @@
 
 **Prima di andare online**
 - [ ] **Email** → `js/config.js`, voce `email`.
-- [x] **Promo PC** → HP EliteBook 840 G5 a 299 €, dall'apertura al 31 dicembre. Dal 1° gennaio la card sparisce da sola (data in `index.html`, attributo `data-promo-until`). Nell'ultima settimana mostra "Ultimi N giorni!".
+- [x] **Promo PC** → HP EliteBook 840 G5 a 299,99 €, dall'apertura al 31 dicembre. Dal 1° gennaio la card sparisce da sola (data in `index.html`, attributo `data-promo-until`). Nell'ultima settimana mostra "Ultimi N giorni!".
 - [ ] **Foto del negozio** → la sezione in home ("Il negozio") è pronta, con 5 riquadri. Metti le foto in `assets/negozio/` con questi nomi: `negozio-1.jpg` (la grande: il negozio), `negozio-2.jpg` (vetrina), `negozio-3.jpg` (banco), `negozio-4.jpg` (laboratorio), `negozio-5.jpg` (prodotti). Ogni foto che aggiungi prende il posto del suo riquadro, senza toccare il codice. Meglio foto orizzontali, larghe circa 1600 px.
-- [x] **Promo iPhone (nuovi)** → iPhone 18 Pro 256 GB a 1.350 € e 18 Pro Max 256 GB a 1.550 €, fino al 31 dicembre (si nasconde da sola il 1° gennaio). L'immagine `assets/promo/iphone-18-pro-promo.webp` è disegnata da noi col modello 3D del sito, con schermate di blocco sugli sfondi di iPhone 18 forniti da New Connection (scelta della cliente, 12/11/2026).
+- [x] **Promo iPhone (nuovi)** → iPhone 18 Pro 256 GB a 1.350,00 € e 18 Pro Max 256 GB a 1.550,00 €, fino al 31 dicembre (si nasconde da sola il 1° gennaio). L'immagine `assets/promo/iphone-18-pro-promo.webp` è disegnata da noi col modello 3D del sito, con schermate di blocco sugli sfondi di iPhone 18 forniti da New Connection (scelta della cliente, 12/11/2026).
 - [ ] **Privacy e cookie con iubenda** → incollare il banner cookie di iubenda nel `<head>` di tutte le pagine e i link "Privacy" e "Cookie" nel footer. In iubenda dichiarare: **Google Maps** (mappa incorporata) e **Google Fonts** (font Outfit).
 - [x] **Anteprima social** → immagine `assets/og-image.jpg` e tag già inseriti nelle 4 pagine; icona per la Home dell'iPhone `assets/apple-touch-icon.png`.
 - [ ] **Dominio definitivo** → appena è deciso: rendere completo l'indirizzo dell'immagine di anteprima (`og:image`) e aggiungere `og:url`; creare `robots.txt` e `sitemap.xml`.
