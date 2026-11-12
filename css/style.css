@@ -850,14 +850,14 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
 
 /* ===== TELEFONO: dimensioni più compatte ===== */
 @media (max-width:760px){
-  :root{--nav-h:64px}
+  :root{--nav-h:70px}
   body{font-size:15px}
   .logo-link{height:36px}
-  .theme-btn,.burger{width:52px;height:52px}
-  .burger span{left:14px;right:14px;height:2.5px}
-  .burger span:nth-child(1){top:16.75px}.burger span:nth-child(2){top:24.75px}.burger span:nth-child(3){top:32.75px}
-  .nav.open .burger span:nth-child(1),.nav.open .burger span:nth-child(3){top:24.75px}
-  .theme-btn svg{width:22px;height:22px}
+  .theme-btn,.burger{width:54px;height:54px}
+  .burger span{left:17px;right:17px;height:2px}
+  .burger span:nth-child(1){top:20px}.burger span:nth-child(2){top:26px}.burger span:nth-child(3){top:32px}
+  .nav.open .burger span:nth-child(1),.nav.open .burger span:nth-child(3){top:26px}
+  .theme-btn svg{width:18px;height:18px}
   .display{font-size:clamp(30px,8vw,40px)}
   .title{font-size:clamp(25px,6.6vw,32px)}
   .body-lg{font-size:15.5px}
