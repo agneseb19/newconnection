@@ -26,6 +26,35 @@
     });
   }
 
+  /* ----- Barra Chiama/WhatsApp sul telefono -----
+     si nasconde quando scorri verso il basso, ricompare quando torni su o arrivi in fondo;
+     sparisce se sullo schermo ci sono già altri bottoni Chiama/WhatsApp */
+  var bar = $('.callbar');
+  if (bar) {
+    var lastY = window.scrollY, dupes = 0, ticking = false, down = false;
+    var others = $$('a.btn[href^="tel:"], a.btn[href*="wa.me"], a.way').filter(function (a) { return !bar.contains(a) && !a.closest('.nav'); });
+    var update = function () {
+      var y = window.scrollY, atEnd = y + window.innerHeight >= document.documentElement.scrollHeight - 80;
+      bar.classList.toggle('hide', dupes > 0 || (down && y > 120 && !atEnd));
+    };
+    if ('IntersectionObserver' in window && others.length) {
+      var io = new IntersectionObserver(function (en) {
+        en.forEach(function (e) { e.target._in = e.isIntersecting; });
+        dupes = others.filter(function (a) { return a._in; }).length; update();
+      }, { threshold: 0.6 });
+      others.forEach(function (a) { io.observe(a); });
+    }
+    window.addEventListener('scroll', function () {
+      if (ticking) return; ticking = true;
+      requestAnimationFrame(function () {
+        var y = window.scrollY;
+        if (Math.abs(y - lastY) > 6) { down = y > lastY; lastY = y; }
+        update(); ticking = false;
+      });
+    }, { passive: true });
+    update();
+  }
+
   /* ----- Tema giorno / notte ----- */
   var root = document.documentElement;
   function setTheme(t) {

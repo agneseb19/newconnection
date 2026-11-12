@@ -80,6 +80,7 @@ async function start() {
     const freeW = L.free.left[1] - L.free.left[0];
     // schermi stretti/alti: la pila scomposta sta nella fascia libera sopra i testi
     const navH = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 76;
+    L.navH = navH;
     const top = navH + 16, bot = Math.max(h * 0.5, h - (w < 620 ? 300 : 340));
     L.band = { top, bot, frac: (bot - top) / h, mid: (top + bot) / 2 / h };
     L.dExp = L.tall ? Math.max(2.6 / (t2 * L.band.frac), 3.9 / (t2 * camera.aspect * 0.94)) : Math.max(3.9 / t2, 5.6 / (t2 * camera.aspect), 5.0 / (t2 * camera.aspect * (freeW / w)));
@@ -107,8 +108,10 @@ async function start() {
     Object.keys(labelEls).forEach((k) => {
       const [d, len] = L.dirs[k];
       labelEls[k].className = 'lbl ' + d;
-      labelEls[k].style.setProperty('--len', (L.w < 620 ? len * 0.7 : len) + 'px');
+      labelEls[k].baseLen = L.w < 620 ? len * 0.7 : len;
+      labelEls[k].style.setProperty('--len', labelEls[k].baseLen + 'px');
       labelEls[k].txW = labelEls[k].querySelector('.tx').offsetWidth || 90;
+      labelEls[k].txH = labelEls[k].querySelector('.tx').offsetHeight || 48;
     });
   }
   layout();
@@ -258,10 +261,53 @@ async function start() {
       }
       Object.keys(pos).forEach((k) => {
         const { x, y } = pos[k];
-        const el = labelEls[k], d = pos[k].side || L.dirs[k][0];
+        const el = labelEls[k];
+        let d = pos[k].side || L.dirs[k][0];
+        // finestre basse: l'etichetta non deve finire sotto l'header né uscire in basso.
+        // Prima si accorcia la linea; se non basta, l'etichetta passa dall'altro lato del pezzo.
+        let len = el.baseLen || 60;
+        if (d === 'up' || d === 'down') {
+          const topLim = (L.navH || 76) + 10, botLim = L.h - 10, minLen = 16, need = el.txH + 6;
+          if (d === 'up' && y - len - need < topLim) {
+            len = Math.max(minLen, y - need - topLim);
+            if (y - len - need < topLim) { d = 'down'; len = Math.min(el.baseLen || 60, Math.max(minLen, botLim - y - need)); }
+          } else if (d === 'down' && y + len + need > botLim) {
+            len = Math.max(minLen, botLim - y - need);
+            if (y + len + need > botLim) { d = 'up'; len = Math.min(el.baseLen || 60, Math.max(minLen, y - need - topLim)); }
+          }
+        }
+        const cls = 'lbl ' + d + (el.classList.contains('on') ? ' on' : '');
+        if (el.className !== cls) el.className = cls;
+        if (el.curLen !== Math.round(len)) { el.curLen = Math.round(len); el.style.setProperty('--len', el.curLen + 'px'); }
         const off = d === 'up' ? 'translate(-50%, calc(-100% + 4.5px))' : d === 'down' ? 'translate(-50%, -4.5px)' : d === 'left' ? 'translate(calc(-100% + 4.5px), -50%)' : 'translate(-4.5px, -50%)';
         el.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px) ' + off;
         el.classList.toggle('on', k === focused);
+        // riquadro occupato dal testo (serve per evitare sovrapposizioni);
+        // vicino ai bordi dello schermo il testo scivola verso l'interno, la linea resta sul pezzo
+        const tw = el.txW || 90, th = el.txH || 48, edge = 8;
+        let sx = 0;
+        if (d === 'up' || d === 'down') {
+          if (x - tw / 2 < edge) sx = edge - (x - tw / 2);
+          else if (x + tw / 2 > L.w - edge) sx = (L.w - edge) - (x + tw / 2);
+        }
+        if (el.curSx !== Math.round(sx)) { el.curSx = Math.round(sx); el.style.setProperty('--sx', el.curSx + 'px'); }
+        pos[k].box = d === 'up' ? [x - tw / 2 + sx, y - len - th - 4, x + tw / 2 + sx, y - len]
+          : d === 'down' ? [x - tw / 2 + sx, y + len, x + tw / 2 + sx, y + len + th + 4] : null;
+        pos[k].moved = d !== L.dirs[k][0];
+      });
+      // se due etichette si sovrappongono, resta quella in evidenza e quella al suo posto originale;
+      // un'etichetta non copre mai il testo della didascalia
+      const sr = stageEl.getBoundingClientRect();
+      const capBoxes = Array.prototype.filter.call(section.querySelectorAll('.cap, .hero-copy'), (c) => +getComputedStyle(c).opacity > 0.3)
+        .map((c) => { const r = c.getBoundingClientRect(); return [r.left - sr.left, r.top - sr.top, r.right - sr.left, r.bottom - sr.top]; });
+      const kept = [];
+      const hits = (bx, list) => list.some((o) => bx[0] < o[2] && bx[2] > o[0] && bx[1] < o[3] && bx[3] > o[1]);
+      Object.keys(pos).sort((a, b) => (b === focused) - (a === focused) || pos[a].moved - pos[b].moved).forEach((k) => {
+        const bx = pos[k].box;
+        // sopra la didascalia: si nasconde sempre (la didascalia dice già il nome del pezzo)
+        const hide = !!bx && (hits(bx, capBoxes) || (k !== focused && hits(bx, kept)));
+        labelEls[k].style.visibility = hide ? 'hidden' : '';
+        if (bx && !hide) kept.push(bx);
       });
     }
   }
