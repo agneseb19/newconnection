@@ -3,7 +3,7 @@
    - Mouse: trascina in ogni direzione
    - Touch: trascina di lato per ruotare; in verticale la pagina scorre (Safari ok)
    ========================================================= */
-import { THREE, hasWebGL, makeRenderer, makeScene, buildIphone, buildAndroid, buildMacbook, buildLaptop, buildDesktop, buildPS5, buildPS4, buildXbox } from './nc3d.js';
+import { THREE, hasWebGL, makeRenderer, makeScene, buildIphone, buildAndroid, buildMacbook, buildLaptop, buildDesktop, buildPS5, buildPS4, buildXbox } from './nc3d.js?v=202611121954';
 
 const root = document.getElementById('explorer');
 
