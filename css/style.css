@@ -548,11 +548,10 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
 /* =========================================================
    PROMO DI APERTURA
    ========================================================= */
-.promos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:20px;align-items:stretch}
+.promos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:20px}
 .promos > li{display:flex}
 .promos > li > .promo{flex:1}
 .promos > li[hidden]{display:none}
-.promos:has(> li[hidden]){grid-template-columns:1fr}
 .promo{position:relative;overflow:hidden;min-height:240px;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;padding:30px;border-radius:var(--r-lg);isolation:isolate}
 .promo h3{margin:0;font-weight:600;font-size:28px;letter-spacing:-.02em}
 .promo p{margin:0}
@@ -587,21 +586,23 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
 .promo-pc-media img{width:100%;height:auto;filter:drop-shadow(0 28px 30px rgba(10,6,60,.45));animation:float 6s ease-in-out infinite;transform-origin:center}
 @keyframes float{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-10px) rotate(-1.5deg)}}
 
-/* --- promo in arrivo: sobria, per non rubare la scena --- */
-.promo-soon{justify-content:flex-start;gap:10px;background:var(--surface);color:var(--fg);border:1.5px dashed var(--line-2)}
-.promo-soon .tag{background:var(--soft);color:var(--fg)}
-.soon-ico{width:44px;height:44px;margin-top:auto;color:var(--accent)}
-.promo-soon p{color:var(--fg-2)}
-.promo-soon a{color:var(--accent);font-weight:600;text-decoration:underline;text-underline-offset:3px}
-
-@media (max-width:1100px){
-  .promos{grid-template-columns:1fr}
-  .promo-soon{min-height:0}
-  .soon-ico{margin-top:8px}
-}
+/* immagine della card: non oltre una certa misura sugli schermi larghi */
+.promo-pc-media img{max-width:520px;margin-inline:auto;display:block}
+/* --- seconda card: foto a sinistra, colori in diagonale opposta --- */
+.promo-flip{--deep:linear-gradient(235deg,#1a4fe0 0%,#3d3bf0 50%,#7a1fe8 100%);grid-template-columns:minmax(0,1fr) minmax(0,1.12fr)}
+.promo-flip .promo-pc-media{order:-1;padding-left:0}
+.promo-flip::after{right:auto;left:-8%}
+.promo-flip .promo-pc-media img{max-width:400px;animation-delay:-3s}
+.price-duo{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:22px}
+.pd-name{display:block;margin-bottom:8px;font-size:14px;font-weight:600;color:#dfe3ff}
+.price-duo .price .num{font-size:clamp(52px,5.4vw,80px)}
+.price-duo .price .cur{font-size:clamp(24px,2.4vw,34px)}
+.promo-flip .when{margin-top:14px;padding-bottom:0}
 @media (max-width:760px){
   .promo-pc{grid-template-columns:1fr;min-height:0;padding:26px 22px 28px}
   .promo-pc-media{order:-1;margin:0 0 6px;max-width:280px;justify-self:center;width:76%;padding-left:0}
+  .promo-flip .promo-pc-media{max-width:230px;width:62%}
+  .price-duo{gap:10px 22px}.price-duo .price .num{font-size:44px}.price-duo .price .cur{font-size:22px}.pd-name{font-size:13px;margin-bottom:6px}
   .promo-pc::after{right:auto;left:50%;top:22%;width:90%;translate:-50% -50%}
   .promo-pc .promo-kicker{margin-top:22px}
   .promo-actions{width:100%}
