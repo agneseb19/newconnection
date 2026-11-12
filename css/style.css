@@ -774,6 +774,15 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
 .models button{height:40px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line-2);font-size:14px;font-weight:500;color:var(--fg-2);transition:color .3s,border-color .3s,background-color .3s}
 .models button:hover{color:var(--fg);border-color:var(--fg)}
 .models button[aria-pressed="true"]{color:var(--fg);border-color:var(--fg);background:var(--surface)}
+/* Servizi: un solo elemento sfumato per schermata; selettore 3D sobrio */
+.split-copy .actions{align-items:center;gap:14px 28px}
+.picker-label{display:inline-flex;margin-bottom:16px}
+.picker .tab[aria-selected="true"]{background:var(--surface);color:var(--fg);box-shadow:0 6px 18px -10px rgba(20,30,90,.45),0 0 0 1px var(--line)}
+.models{gap:4px}
+.models button{height:36px;padding:0 14px;border:0;background:none}
+.models button:hover{color:var(--fg)}
+.models button[aria-pressed="true"]{background:var(--soft);color:var(--fg)}
+@media (max-width:960px){.split-3d{margin-top:28px;padding-top:32px;border-top:1px solid var(--line)}}
 @media (max-width:960px){.picker .tabs{width:100%;display:grid;grid-template-columns:repeat(3,1fr)}}
 .contact-ways+.sect{padding-top:24px}
 
@@ -844,11 +853,11 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
   :root{--nav-h:64px}
   body{font-size:15px}
   .logo-link{height:36px}
-  .theme-btn,.burger{width:46px;height:46px}
-  .burger span{left:12px;right:12px;height:2.5px}
-  .burger span:nth-child(1){top:14.5px}.burger span:nth-child(2){top:21.75px}.burger span:nth-child(3){top:29px}
-  .nav.open .burger span:nth-child(1),.nav.open .burger span:nth-child(3){top:21.75px}
-  .theme-btn svg{width:19px;height:19px}
+  .theme-btn,.burger{width:52px;height:52px}
+  .burger span{left:14px;right:14px;height:2.5px}
+  .burger span:nth-child(1){top:16.75px}.burger span:nth-child(2){top:24.75px}.burger span:nth-child(3){top:32.75px}
+  .nav.open .burger span:nth-child(1),.nav.open .burger span:nth-child(3){top:24.75px}
+  .theme-btn svg{width:22px;height:22px}
   .display{font-size:clamp(30px,8vw,40px)}
   .title{font-size:clamp(25px,6.6vw,32px)}
   .body-lg{font-size:15.5px}
