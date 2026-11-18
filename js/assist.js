@@ -1,7 +1,7 @@
 /* =========================================================
    ASSISTENZA — i 4 passaggi, con l'iPhone vero legato allo scroll
    ========================================================= */
-import { THREE, hasWebGL, makeRenderer, makeScene, buildIphoneExploded } from './nc3d.js?v=202611181226';
+import { THREE, hasWebGL, makeRenderer, makeScene, buildIphoneExploded } from './nc3d.js?v=202611181236';
 
 const wrap = document.getElementById('stepsWrap');
 const gsap = window.gsap, ScrollTrigger = window.ScrollTrigger;
