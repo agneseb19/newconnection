@@ -2,19 +2,23 @@
 <html lang="it" data-theme="light">
 <head>
 <meta charset="utf-8">
+<!-- iubenda: banner cookie + blocco automatico (deve restare il primo script della pagina) -->
+<script type="text/javascript" src="https://embeds.iubenda.com/widgets/ce4663e6-2331-42e8-be61-8dd372ebb514.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Contatti — New Connection Valmontone</title>
 <meta name="description" content="Via Molino San Giovanni 37, Valmontone (RM). Lun–Ven 9:30–13 e 15:30–19:30, sabato 9:30–13. Telefono e WhatsApp 348 176 8071.">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<!-- Anteprima quando si condivide il link (WhatsApp, Facebook...). Con il dominio definitivo: rendere assoluto og:image e aggiungere og:url -->
+<!-- Anteprima quando si condivide il link (WhatsApp, Facebook...) -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="New Connection">
 <meta property="og:locale" content="it_IT">
 <meta property="og:title" content="Contatti — New Connection Valmontone">
 <meta property="og:description" content="Via Molino San Giovanni 37, Valmontone (RM). Lun–Ven 9:30–13 e 15:30–19:30, sabato 9:30–13. Telefono e WhatsApp 348 176 8071.">
-<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image" content="https://newconnectionstore.it/assets/og-image.jpg">
+<meta property="og:url" content="https://newconnectionstore.it/contatti.html">
+<link rel="canonical" href="https://newconnectionstore.it/contatti.html">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="New Connection — riparazioni di smartphone, PC e console a Valmontone">
@@ -23,9 +27,7 @@
   /* tema giorno (predefinito) / notte: applicato prima che la pagina compaia */
   (function () { var t = 'light'; try { t = localStorage.getItem('nc-theme') || 'light'; } catch (e) {} document.documentElement.setAttribute('data-theme', t); })();
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css?v=202611181236">
 </head>
 <body>
@@ -121,7 +123,7 @@
       <p>&copy; <span data-year></span> New Connection di G&amp;L Srl · Sede legale Via Casilina 67, 00038 Valmontone (RM) · P. IVA e C.F. 17088051002</p>
       <nav aria-label="Pagine"><a href="index.html">Home</a><a href="servizi.html">Servizi</a><a href="assistenza.html">Assistenza</a><a href="contatti.html">Contatti</a></nav>
     </div>
-    <p class="credits">New Connection è un centro assistenza indipendente, non affiliato ad Apple, Sony o Microsoft. I marchi appartengono ai rispettivi proprietari. <a href="crediti-3d.html">Crediti modelli 3D</a></p>
+    <p class="credits">New Connection è un centro assistenza indipendente, non affiliato ad Apple, Sony o Microsoft. I marchi appartengono ai rispettivi proprietari. <a class="sep" data-nc="privacyPolicy" href="#" target="_blank" rel="noopener">Privacy Policy</a><a class="sep" data-nc="cookiePolicy" href="#" target="_blank" rel="noopener">Cookie Policy</a><a href="crediti-3d.html">Crediti modelli 3D</a></p>
   </div>
 </footer>
 <script src="js/vendor/gsap.min.js"></script>

@@ -28,6 +28,10 @@ window.NC = {
     0: []
   },
 
+  // Link di iubenda (Privacy Policy e Cookie Policy). Finché sono vuoti, i link restano nascosti.
+  privacyPolicy: 'https://www.iubenda.com/privacy-policy/55924476',
+  cookiePolicy: 'https://www.iubenda.com/privacy-policy/55924476/cookie-policy',
+
   // Dati della società (footer)
   societa: 'NEW CONNECTION DI G&L SRL',
   sede: 'Via Casilina, 67 — 00038 Valmontone (RM)',
