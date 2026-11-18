@@ -35,6 +35,7 @@
   var wa = choice.querySelector('[data-send="whatsapp"]');
   var em = choice.querySelector('[data-send="email"]');
   if (!NC.email) { em.disabled = true; em.querySelector('small').textContent = 'Indirizzo email in arrivo'; }
+  else em.querySelector('small').textContent = NC.email;
 
   wa.addEventListener('click', function () {
     if (!NC.whatsapp) return;

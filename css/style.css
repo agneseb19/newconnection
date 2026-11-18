@@ -596,6 +596,23 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
 .promo-flip .promo-pc-media{order:-1;padding-left:0}
 .promo-flip::after{right:auto;left:-8%}
 .promo-flip .promo-pc-media img{max-width:400px;animation-delay:-3s}
+/* schermi larghi: PC a tutta larghezza, sotto le due card dei telefoni affiancate
+   (foto in alto, testo sotto, stessa altezza, bottoni allineati in fondo) */
+@media (min-width:1001px){
+  .promos{grid-template-columns:1fr 1fr}
+  .promos > li:first-child{grid-column:1/-1}
+  .promo-flip,.promo-tall{grid-template-columns:1fr;grid-template-rows:auto 1fr;align-items:stretch;min-height:0;padding-top:28px}
+  .promo-flip .promo-pc-media,.promo-tall .promo-pc-media{order:-1;justify-self:center;padding:0;margin:0 0 10px}
+  .promo-flip .promo-pc-media img,.promo-tall .promo-pc-media img{height:250px;width:auto;max-width:none}
+  .promo-flip::after,.promo-tall::after{left:50%;right:auto;top:24%;width:70%;translate:-50% -50%}
+  .promo-flip .promo-pc-copy,.promo-tall .promo-pc-copy{height:100%}
+  .promo-flip .promo-actions,.promo-tall .promo-actions{margin-top:auto;padding-top:24px}
+  .promo-flip .price-duo .price .num,.promo-tall .price .num{font-size:clamp(48px,4.2vw,66px)}
+  .promo-flip .price-duo .price .cur,.promo-tall .price .cur{font-size:clamp(22px,1.9vw,30px)}
+  .promo-flip h3,.promo-tall h3{font-size:clamp(26px,2.2vw,34px)}
+}
+/* terza card: telefono singolo verticale, più stretto */
+.promo-tall .promo-pc-media img{max-width:190px;animation-delay:-1.5s}
 .price-duo{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:22px}
 .pd-name{display:block;margin-bottom:8px;font-size:14px;font-weight:600;color:#dfe3ff}
 .price-duo .price .num{font-size:clamp(52px,5.4vw,80px)}
@@ -605,6 +622,7 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
   .promo-pc{grid-template-columns:1fr;min-height:0;padding:26px 22px 28px}
   .promo-pc-media{order:-1;margin:0 0 6px;max-width:280px;justify-self:center;width:76%;padding-left:0}
   .promo-flip .promo-pc-media{max-width:230px;width:62%}
+  .promo-tall .promo-pc-media{max-width:150px;width:42%}
   .price-duo{gap:10px 22px}.price-duo .price .num{font-size:44px}.price-duo .price .cur{font-size:22px}.pd-name{font-size:13px;margin-bottom:6px}
   .promo-pc::after{right:auto;left:50%;top:22%;width:90%;translate:-50% -50%}
   .promo-pc .promo-kicker{margin-top:22px}

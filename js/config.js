@@ -7,11 +7,11 @@ window.NC = {
   indirizzo: 'Via Molino San Giovanni 37, 00038 Valmontone (RM)',
   telefono: '+39 348 176 8071',
   whatsapp: '393481768071',   // solo numero con prefisso
-  email: '',         // es. 'info@newconnection.it' (da inserire quando sarà attiva)
+  email: 'info@newconnectionstore.it',
 
-  // Quando i profili cambieranno nome, aggiorna solo questi due link
-  instagram: 'https://www.instagram.com/reset.valmontonestore/',
-  facebook: 'https://www.facebook.com/reset.valmontonestore',
+  // Profili social di New Connection
+  instagram: 'https://www.instagram.com/new_connection_valmontone/',
+  facebook: 'https://www.facebook.com/profile.php?id=100092974904243',
 
   // Link alle recensioni Google del negozio (scheda di Reset Valmontone Store).
   // Quando la scheda Google verrà rinominata in New Connection, cambia anche il nome qui sotto.

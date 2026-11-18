@@ -8,13 +8,14 @@
 
 ⚠️ **Usa sempre Go Live.** Se apri `index.html` con il doppio clic, il browser blocca i modelli 3D: il sito mostra i testi ma non le animazioni (e compare un avviso).
 
-## ✅ DA FARE (aggiornato all'11 novembre 2026)
+## ✅ DA FARE (aggiornato al 18 novembre 2026)
 
 **Prima di andare online**
-- [ ] **Email** → `js/config.js`, voce `email`.
+- [x] **Email** → info@newconnectionstore.it (in `js/config.js`): attiva nel modulo di Assistenza, nella pagina Contatti e nel footer.
 - [x] **Promo PC** → HP EliteBook 840 G5 a 299,99 €, dall'apertura al 31 dicembre. Dal 1° gennaio la card sparisce da sola (data in `index.html`, attributo `data-promo-until`). Nell'ultima settimana mostra "Ultimi N giorni!".
 - [ ] **Foto del negozio** → la sezione in home ("Il negozio") è pronta, con 5 riquadri. Metti le foto in `assets/negozio/` con questi nomi: `negozio-1.jpg` (la grande: il negozio), `negozio-2.jpg` (vetrina), `negozio-3.jpg` (banco), `negozio-4.jpg` (laboratorio), `negozio-5.jpg` (prodotti). Ogni foto che aggiungi prende il posto del suo riquadro, senza toccare il codice. Meglio foto orizzontali, larghe circa 1600 px.
 - [x] **Promo iPhone (nuovi)** → iPhone 18 Pro 256 GB a 1.350,00 € e 18 Pro Max 256 GB a 1.550,00 €, fino al 31 dicembre (si nasconde da sola il 1° gennaio). L'immagine `assets/promo/iphone-18-pro-promo.webp` è disegnata da noi col modello 3D del sito, con schermate di blocco sugli sfondi di iPhone 18 forniti da New Connection (scelta della cliente, 12/11/2026).
+- [x] **Promo iPhone 15 usato** → 128 GB, grado A, a 459,99 €, fino al 31 dicembre. Immagine `assets/promo/iphone-15-usato.webp` (stesso sfondo viola).
 - [ ] **Privacy e cookie con iubenda** → incollare il banner cookie di iubenda nel `<head>` di tutte le pagine e i link "Privacy" e "Cookie" nel footer. In iubenda dichiarare: **Google Maps** (mappa incorporata) e **Google Fonts** (font Outfit).
 - [x] **Anteprima social** → immagine `assets/og-image.jpg` e tag già inseriti nelle 4 pagine; icona per la Home dell'iPhone `assets/apple-touch-icon.png`.
 - [ ] **Dominio definitivo** → appena è deciso: rendere completo l'indirizzo dell'immagine di anteprima (`og:image`) e aggiungere `og:url`; creare `robots.txt` e `sitemap.xml`.
@@ -24,7 +25,7 @@
 **Dopo, fuori dal sito — NON DIMENTICARE**
 - [ ] **Scheda Google "Reset Valmontone Store"** → rinominarla in New Connection, cambiare l'indirizzo in **Via Molino San Giovanni 37** (oggi è ancora Via della Pace 1/2, presso Fashion Hotel) e aggiungere il link al nuovo sito. Poi aggiornare `recensioniGoogle` in `js/config.js`.
 - [ ] **Profilo WhatsApp Business (348 176 8071)** → oggi si presenta come "Reset Valmontone Store" con il logo Reset: cambiare nome, foto profilo (logo New Connection) e descrizione nell'app WhatsApp Business.
-- [ ] **Instagram e Facebook** → dopo il cambio nome, se cambia il nome utente (`reset.valmontonestore`) aggiornare i link `instagram` e `facebook` in `js/config.js`.
+- [x] **Instagram e Facebook** → link aggiornati ai nuovi profili New Connection (`new_connection_valmontone` e la pagina Facebook) in `js/config.js`.
 
 ## Il sito attuale (14 ottobre, con i dati di Gianmarco)
 Stile chiaro e arrotondato (vedi `DESIGN.md`). In home, nell'ordine (dall'11 novembre): iPhone 3D, barra con orario di oggi / indirizzo / telefono / WhatsApp, promo di apertura, chi siamo, il negozio (foto), recensioni, vieni a trovarci. Riparazioni e vendita sono solo nella pagina Servizi.
