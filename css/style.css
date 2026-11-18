@@ -580,7 +580,7 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
 .promo-pc .when{padding-bottom:8px;font-size:15px;font-weight:600;color:#fff}
 .when::before{content:"";display:inline-block;width:8px;height:8px;margin-right:8px;border-radius:50%;background:#7dffb3;vertical-align:1px}
 .promo-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.btn-white{background:#fff;color:#14163a;box-shadow:0 14px 30px -14px rgba(0,0,0,.5)}
+.btn-white{white-space:nowrap;background:#fff;color:#14163a;box-shadow:0 14px 30px -14px rgba(0,0,0,.5)}
 .btn-white:hover{transform:translateY(-2px)}
 .btn-white svg{color:#1faf54}
 .btn-ghost-light{border:1.5px solid rgba(255,255,255,.55);color:#fff}
@@ -593,26 +593,31 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
 .promo-pc-media img{max-width:520px;margin-inline:auto;display:block}
 /* --- seconda card: foto a sinistra, colori in diagonale opposta --- */
 .promo-flip{--deep:linear-gradient(235deg,#1a4fe0 0%,#3d3bf0 50%,#7a1fe8 100%);grid-template-columns:minmax(0,1fr) minmax(0,1.12fr)}
-.promo-flip .promo-pc-media{order:-1;padding-left:0}
-.promo-flip::after{right:auto;left:-8%}
+.promo-flip .promo-pc-media{order:0;padding-left:0}
+.promo-flip::after{right:-8%;left:auto}
 .promo-flip .promo-pc-media img{max-width:400px;animation-delay:-3s}
 /* schermi larghi: PC a tutta larghezza, sotto le due card dei telefoni affiancate
    (foto in alto, testo sotto, stessa altezza, bottoni allineati in fondo) */
-@media (min-width:1001px){
+@media (min-width:1200px){
   .promos{grid-template-columns:1fr 1fr}
   .promos > li:first-child{grid-column:1/-1}
-  .promo-flip,.promo-tall{grid-template-columns:1fr;grid-template-rows:auto 1fr;align-items:stretch;min-height:0;padding-top:28px}
-  .promo-flip .promo-pc-media,.promo-tall .promo-pc-media{order:-1;justify-self:center;padding:0;margin:0 0 10px}
-  .promo-flip .promo-pc-media img,.promo-tall .promo-pc-media img{height:250px;width:auto;max-width:none}
-  .promo-flip::after,.promo-tall::after{left:50%;right:auto;top:24%;width:70%;translate:-50% -50%}
-  .promo-flip .promo-pc-copy,.promo-tall .promo-pc-copy{height:100%}
-  .promo-flip .promo-actions,.promo-tall .promo-actions{margin-top:auto;padding-top:24px}
-  .promo-flip .price-duo .price .num,.promo-tall .price .num{font-size:clamp(48px,4.2vw,66px)}
-  .promo-flip .price-duo .price .cur,.promo-tall .price .cur{font-size:clamp(22px,1.9vw,30px)}
-  .promo-flip h3,.promo-tall h3{font-size:clamp(26px,2.2vw,34px)}
+  /* testo a sinistra, telefoni a destra (come la card del PC) */
+  .promo-flip,.promo-tall{grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);align-items:center;min-height:0;gap:8px 16px}
+  .promo-flip .promo-pc-media,.promo-tall .promo-pc-media{order:0;justify-self:center;padding:0;margin:0}
+  .promo-flip{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
+  .promo-flip .promo-pc-media img,.promo-tall .promo-pc-media img{width:auto;max-width:100%;height:auto;max-height:260px}
+  .promo-flip::after,.promo-tall::after{left:auto;right:-14%;top:50%;width:62%;translate:0 -50%}
+  .promo-flip .price-duo{flex-direction:column;gap:10px}
+  .promo-flip .price-duo .price .num,.promo-tall .price .num{font-size:clamp(42px,3.6vw,58px)}
+  .promo-flip .price-duo .price .cur,.promo-tall .price .cur{font-size:clamp(20px,1.7vw,26px)}
+  .promo-flip h3,.promo-tall h3{font-size:clamp(24px,2vw,32px)}
+  .promo-tall .price-row{flex-direction:column;align-items:flex-start;gap:6px}
+  .promo-flip .promo-actions .btn,.promo-tall .promo-actions .btn{height:50px;padding:0 20px;font-size:15px}
 }
 /* terza card: telefono singolo verticale, più stretto */
 .promo-tall .promo-pc-media img{max-width:190px;animation-delay:-1.5s}
+/* immagini dei telefoni: stessa altezza massima in tutte le card */
+.promo-flip .promo-pc-media img,.promo-tall .promo-pc-media img{width:auto;max-height:280px;margin-inline:auto}
 .price-duo{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:22px}
 .pd-name{display:block;margin-bottom:8px;font-size:14px;font-weight:600;color:#dfe3ff}
 .price-duo .price .num{font-size:clamp(52px,5.4vw,80px)}
@@ -621,7 +626,7 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
 @media (max-width:760px){
   .promo-pc{grid-template-columns:1fr;min-height:0;padding:26px 22px 28px}
   .promo-pc-media{order:-1;margin:0 0 6px;max-width:280px;justify-self:center;width:76%;padding-left:0}
-  .promo-flip .promo-pc-media{max-width:230px;width:62%}
+  .promo-flip .promo-pc-media{order:-1;max-width:230px;width:62%}
   .promo-tall .promo-pc-media{max-width:150px;width:42%}
   .price-duo{gap:10px 22px}.price-duo .price .num{font-size:44px}.price-duo .price .cur{font-size:22px}.pd-name{font-size:13px;margin-bottom:6px}
   .promo-pc::after{right:auto;left:50%;top:22%;width:90%;translate:-50% -50%}

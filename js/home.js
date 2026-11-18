@@ -2,7 +2,7 @@
    HOME — iPhone vero che si scompone in esploso tecnico
    (come i siti degli orologi) e si ricompone seguendo lo scroll.
    ========================================================= */
-import { THREE, hasWebGL, makeRenderer, makeScene, buildIphoneExploded } from './nc3d.js?v=202611181210';
+import { THREE, hasWebGL, makeRenderer, makeScene, buildIphoneExploded } from './nc3d.js?v=202611181220';
 
 const section = document.getElementById('teardown');
 const canvas = document.getElementById('heroCanvas');
