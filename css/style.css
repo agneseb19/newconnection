@@ -530,24 +530,40 @@ a.info-cell:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-col
 @keyframes marquee{to{transform:translateX(-50%)}}
 
 /* =========================================================
-   IL NEGOZIO — griglia di foto (1 grande + 4 piccole)
+   IL NEGOZIO — griglia di foto (1 grande + 4 piccole + 2 larghe)
    ========================================================= */
-.store-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(2,clamp(180px,17vw,260px));gap:16px}
+.store-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(3,clamp(180px,17vw,260px));gap:16px}
+.shot.wide{grid-column:span 2}
 .shot{position:relative;margin:0;border-radius:var(--r-lg);overflow:hidden;background:var(--bg-2);isolation:isolate}
 .shot:first-child{grid-column:span 2;grid-row:span 2}
 .shot img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 .shot:hover img{transform:scale(1.05)}
+.shot figcaption{position:absolute;left:14px;bottom:14px;z-index:1;padding:7px 14px;border-radius:999px;background:rgba(10,14,32,.55);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#fff;font-size:13px;font-weight:500;letter-spacing:.01em;line-height:1.2;pointer-events:none}
+.shot::after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(to top,rgba(0,0,0,.28),transparent);pointer-events:none}
+.shot.empty figcaption,.shot.empty::after{display:none}
 .shot-ph{display:none}
 .shot.empty img{display:none}
 .shot.empty .shot-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
   background:var(--soft);border:1.5px dashed var(--line-2);border-radius:inherit;color:var(--fg-2);font-size:15px;font-weight:500}
 .shot.empty .shot-ph svg{width:34px;height:34px;color:var(--accent)}
 .shot.empty:first-child .shot-ph svg{width:48px;height:48px}
+.store-dots{display:none}
+/* iPad e telefoni: carosello orizzontale da scorrere col dito (invece della griglia) */
+@media (max-width:1100px){
+  .store-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+    margin-inline:calc(var(--margin) * -1);padding-inline:var(--margin);scroll-padding-inline:var(--margin)}
+  .store-grid::-webkit-scrollbar{display:none}
+  .store-grid .shot{flex:0 0 min(44%,440px);aspect-ratio:4/3;scroll-snap-align:start;border-radius:var(--r-md)}
+  .store-grid .shot[data-reveal]{opacity:1;translate:none;transition:none}
+  .store-grid .shot:hover img{transform:none}
+  .store-dots{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:18px}
+  .store-dots button{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:var(--line-2);cursor:pointer;transition:width .35s var(--ease),background-color .35s var(--ease)}
+  .store-dots button.on{width:24px;background:var(--accent)}
+}
 @media (max-width:760px){
-  .store-grid{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:clamp(130px,38vw,200px);gap:12px}
-  .shot{border-radius:var(--r-md)}
-  .shot:first-child{grid-column:1/-1;grid-row:span 2}
-  .shot.empty .shot-ph{font-size:13px;gap:8px}
+  .store-grid{gap:12px}
+  .store-grid .shot{flex-basis:84%}
+  .shot figcaption{left:10px;bottom:10px;padding:5px 11px;font-size:12px}
 }
 @media (prefers-reduced-motion:reduce){.callbar{transition:none}.shot img{transition:none}.shot:hover img{transform:none}}
 

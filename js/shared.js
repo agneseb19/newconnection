@@ -265,3 +265,31 @@
     if (nxt) nxt.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
   }
 })();
+
+/* ----- Foto del negozio: pallini del carosello (iPad e telefoni) ----- */
+(function () {
+  var grid = document.querySelector('.store-grid'), dots = document.querySelector('.store-dots');
+  if (!grid || !dots) return;
+  var shots = Array.prototype.slice.call(grid.querySelectorAll('.shot'));
+  var btns = shots.map(function (shot, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-label', 'Foto ' + (i + 1) + ' di ' + shots.length);
+    b.addEventListener('click', function () {
+      grid.scrollTo({ left: shot.offsetLeft - shots[0].offsetLeft, behavior: 'smooth' });
+    });
+    dots.appendChild(b);
+    return b;
+  });
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var step = shots.length > 1 ? shots[1].offsetLeft - shots[0].offsetLeft : 1;
+    var i = Math.round(grid.scrollLeft / step);
+    if (grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 4) i = shots.length - 1;
+    btns.forEach(function (b, k) { b.classList.toggle('on', k === i); });
+  }
+  grid.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+})();
