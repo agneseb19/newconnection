@@ -29,7 +29,7 @@
 </script>
 <script type="importmap">{"imports":{"three":"./js/vendor/three.module.min.js","three/addons/":"./js/vendor/addons/"}}</script>
 <link rel="preload" href="assets/fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=202611181236">
+<link rel="stylesheet" href="css/style.css?v=202611211800">
 </head>
 <body>
 <header class="nav">
@@ -78,7 +78,7 @@
   <div class="wrap">
     <ul class="strip" data-reveal>
       <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><b>Oggi</b> <span data-today-hours>Lun–Ven 9:30–13 · 15:30–19:30 · Sab 9:30–13</span></span><span class="status" data-status></span></li>
-      <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Via+Molino+San+Giovanni+37,+00038+Valmontone+RM" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span>Via Molino San Giovanni 37, Valmontone</span></a></li>
+      <li><a href="https://www.google.com/maps/search/?api=1&amp;query=New+Connection+Valmontone&amp;query_place_id=ChIJUalIkGp9JRMRs1AzSCSB8uU" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span>Via Molino San Giovanni 37, Valmontone</span></a></li>
       <li><a href="tel:+393481768071"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><span>348 176 8071</span></a></li>
       <li><a class="strip-wa" href="https://wa.me/393481768071" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2s.2-1.1.1-1.2-.2-.2-.4-.3z"/></svg><span>WhatsApp</span></a></li>
     </ul>
@@ -197,15 +197,19 @@
       <h2 class="title">Benvenuto <span class="grad">da noi.</span></h2>
       <p class="body-lg">Un posto accogliente in Via Molino San Giovanni, dove porti il tuo dispositivo e parli direttamente con chi lo ripara.</p>
     </div>
-    <!-- FOTO DEL NEGOZIO: metti i file in assets/negozio/ con questi nomi: negozio-1.jpg (la grande) … negozio-5.jpg.
-         Finché una foto manca, al suo posto compare un riquadro con l'etichetta. -->
+    <!-- FOTO DEL NEGOZIO (21/11/2026): 7 foto in assets/negozio/ (negozio-1.webp … negozio-7.webp).
+         La prima è la grande; le ultime due (classe "wide") occupano mezza riga ciascuna.
+         Per cambiare una foto: sostituisci il file con lo stesso nome. -->
     <div class="store-grid">
-      <figure class="shot" data-reveal style="--i:0"><img src="assets/negozio/negozio-1.jpg" alt="Il negozio New Connection a Valmontone" loading="lazy" onerror="this.parentNode.classList.add('empty')"><span class="shot-ph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.6-2.4h6.8L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.6"/></svg><span>Il negozio</span></span></figure>
-      <figure class="shot" data-reveal style="--i:1"><img src="assets/negozio/negozio-2.jpg" alt="La vetrina del negozio" loading="lazy" onerror="this.parentNode.classList.add('empty')"><span class="shot-ph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.6-2.4h6.8L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.6"/></svg><span>La vetrina</span></span></figure>
-      <figure class="shot" data-reveal style="--i:2"><img src="assets/negozio/negozio-3.jpg" alt="Il banco di accoglienza" loading="lazy" onerror="this.parentNode.classList.add('empty')"><span class="shot-ph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.6-2.4h6.8L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.6"/></svg><span>Il banco</span></span></figure>
-      <figure class="shot" data-reveal style="--i:3"><img src="assets/negozio/negozio-4.jpg" alt="Il laboratorio riparazioni" loading="lazy" onerror="this.parentNode.classList.add('empty')"><span class="shot-ph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.6-2.4h6.8L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.6"/></svg><span>Il laboratorio</span></span></figure>
-      <figure class="shot" data-reveal style="--i:4"><img src="assets/negozio/negozio-5.jpg" alt="I prodotti in esposizione" loading="lazy" onerror="this.parentNode.classList.add('empty')"><span class="shot-ph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.6-2.4h6.8L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.6"/></svg><span>I prodotti</span></span></figure>
+      <figure class="shot" data-reveal style="--i:0"><img src="assets/negozio/negozio-1.webp" alt="Il banco di accoglienza di New Connection a Valmontone" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('empty')"><figcaption>Il banco</figcaption></figure>
+      <figure class="shot" data-reveal style="--i:1"><img src="assets/negozio/negozio-2.webp" alt="La parete degli smartphone in esposizione" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('empty')"><figcaption>Smartphone</figcaption></figure>
+      <figure class="shot" data-reveal style="--i:2"><img src="assets/negozio/negozio-3.webp" alt="Notebook e tablet in esposizione" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('empty')"><figcaption>Notebook e tablet</figcaption></figure>
+      <figure class="shot" data-reveal style="--i:3"><img src="assets/negozio/negozio-4.webp" alt="L'ingresso del negozio, con lo schermo che mostra il sito di New Connection" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('empty')"><figcaption>L’ingresso</figcaption></figure>
+      <figure class="shot" data-reveal style="--i:4"><img src="assets/negozio/negozio-5.webp" alt="Il banco di lavoro del laboratorio, con gli attrezzi per le riparazioni" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('empty')"><figcaption>Il banco di lavoro</figcaption></figure>
+      <figure class="shot wide" data-reveal style="--i:5"><img src="assets/negozio/negozio-6.webp" alt="La vetrina di New Connection in Via Molino San Giovanni 37" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('empty')"><figcaption>Via Molino San Giovanni 37</figcaption></figure>
+      <figure class="shot wide" data-reveal style="--i:6"><img src="assets/negozio/negozio-7.webp" alt="Il laboratorio riparazioni" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('empty')"><figcaption>Il laboratorio</figcaption></figure>
     </div>
+    <div class="store-dots" role="group" aria-label="Scorri le foto del negozio"></div>
   </div>
 </section>
 
@@ -253,11 +257,11 @@
           <p class="vi-status"><span class="status" data-status></span></p>
         </div>
         <div class="actions">
-          <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Via+Molino+San+Giovanni+37,+00038+Valmontone+RM" target="_blank" rel="noopener">Indicazioni <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></a>
+          <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=New+Connection+Valmontone&amp;destination_place_id=ChIJUalIkGp9JRMRs1AzSCSB8uU" target="_blank" rel="noopener">Indicazioni <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5.5 4H12v6.5"/></svg></a>
           <a class="btn btn-line" href="tel:+393481768071"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg> Chiama</a>
         </div>
       </div>
-      <div class="visit-map"><iframe title="Mappa: New Connection, Via Molino San Giovanni 37, Valmontone" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Via+Molino+San+Giovanni+37,+00038+Valmontone+RM&amp;z=16&amp;output=embed"></iframe></div>
+      <div class="visit-map"><iframe title="Mappa: New Connection, Via Molino San Giovanni 37, Valmontone" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.4068535789047!2d12.911828475802858!3d41.776444671773206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13257d6a9048a951%3A0xe5f28124483350b3!2sNew%20Connection!5e0!3m2!1sit!2sit!4v1795170077729!5m2!1sit!2sit"></iframe></div>
     </div>
   </div>
 </section>
@@ -276,7 +280,7 @@
         <a href="tel:+393481768071">348 176 8071</a>
         <a href="https://wa.me/393481768071" target="_blank" rel="noopener">WhatsApp</a>
         <a data-nc="email" href="mailto:info@newconnectionstore.it">info@newconnectionstore.it</a>
-        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Via+Molino+San+Giovanni+37,+00038+Valmontone+RM" target="_blank" rel="noopener">Via Molino San Giovanni 37<br>Valmontone (RM)</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=New+Connection+Valmontone&amp;query_place_id=ChIJUalIkGp9JRMRs1AzSCSB8uU" target="_blank" rel="noopener">Via Molino San Giovanni 37<br>Valmontone (RM)</a>
       </div>
       <div class="foot-col">
         <span class="k">Orari</span>
@@ -299,9 +303,9 @@
 </footer>
 <script src="js/vendor/gsap.min.js"></script>
 <script src="js/vendor/ScrollTrigger.min.js"></script>
-<script src="js/config.js?v=202611181236"></script>
-<script src="js/reviews.js?v=202611181236"></script>
-<script src="js/shared.js?v=202611181236"></script>
-<script type="module" src="js/home.js?v=202611181236"></script>
+<script src="js/config.js?v=202611211800"></script>
+<script src="js/reviews.js?v=202611211800"></script>
+<script src="js/shared.js?v=202611211800"></script>
+<script type="module" src="js/home.js?v=202611211800"></script>
 </body>
 </html>
